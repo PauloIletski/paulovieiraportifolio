@@ -11,7 +11,7 @@ export function Menu(){
         },
         {
             name: "Habilidades",
-            href: "#habilities"  
+            href: "#habilidades"  
         },
         {
             name: "Projetos",
@@ -24,6 +24,10 @@ export function Menu(){
         {
             name:"Contato",
             href:"#contact"
+        },
+        {
+            name:"Redes Sociais",
+            href:"#network"
         }
     ]
 

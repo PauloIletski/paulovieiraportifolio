@@ -75,10 +75,10 @@ export function SkillsHero() {
   ];
 
   return (
-    <section id="habilities" className="flex flex-col min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-start lg:mt-0 justify-start mt-30 text-center">
-      <h1 className="text-3xl md:text-5xl font-bold">
+    <section id="habilidades" className="flex flex-col min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-start lg:mt-0 justify-start mt-30 text-center">
+      <h2 className="text-3xl md:text-5xl font-bold">
         Habilidades
-      </h1>
+      </h2>
       <p className="text-lg mb-5 px-4">Stacks e Áreas de Atuação</p>
       <div className="grid grid-cols-1 p-10 md:grid-cols-2 gap-8">
         {mockSkills.map((skill, index) => (
@@ -98,7 +98,7 @@ export function SkillsHero() {
                     </div>
                   ))}
                 </div>
-              <p className="text-gray-700 text-start mb-4">{skill.description}</p>
+              <p className="text-gray-700 dark:text-black text-start mb-4">{skill.description}</p>
                
         
         </div>))}
