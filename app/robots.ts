@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://paulovieira.dev/sitemap.xml",
+    sitemap: "https://paulovieira.site/sitemap.xml",
     host: "https://paulovieira.site",
   };
 }
