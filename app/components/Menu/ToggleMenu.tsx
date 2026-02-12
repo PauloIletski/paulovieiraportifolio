@@ -48,7 +48,7 @@ export function MenuToggle(props: MenuProps) {
            </button>
         </li>
         {props.items.map((item) => (
-          <li key={item.name} className="px-4 py-3 hover:bg-zinc-50">
+          <li key={item.name} className="px-4 py-3 hover:bg-zinc-50" onClick={()=>setIsOpen(false)}>
             <a
               href={item.href}
               className="text-sm font-medium text-zinc-700 hover:text-zinc-900"
