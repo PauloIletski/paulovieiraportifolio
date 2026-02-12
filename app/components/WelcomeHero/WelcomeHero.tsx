@@ -1,3 +1,7 @@
+'use client'
+
+//necessário componentizar links pra manter o componente geral serverside
+import { gtmEvent } from "@/app/lib/gtm";
 import Image from "next/image";
 
 export function WelcomeHero() {
@@ -19,6 +23,7 @@ export function WelcomeHero() {
   };
 
   return (
+
     <section id="hero" className="flex flex-col md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-center justify-center text-center">
         <div className="absolute inset-0 -z-10">
         <Image
@@ -49,6 +54,7 @@ export function WelcomeHero() {
         </p>
         <a
           href={mockText.linkProjectsHref}
+          onClick={()=>gtmEvent("cta_click",{cta_name:"ver_projetos", section:"hero"})}
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
         >
           {mockText.linkProjectsText}
