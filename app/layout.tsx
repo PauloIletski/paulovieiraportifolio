@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Menu } from "@/app/components/Menu/Menu";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     description:
       "Projetos, experiencias e habilidades em desenvolvimento full stack com foco em performance e escalabilidade.",
     siteName: "Paulo Vieira Portifolio",
+    images: [
+      {
+        url: "/vercel",
+        width: 1200,
+        height: 630,
+        alt: "Paulo Vieira - Desenvolvedor Fullstack",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,8 +72,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Analytics/>
-        <SpeedInsights/>
+        <Analytics />
+        <SpeedInsights />
         <Menu />
         {children}
       </body>
