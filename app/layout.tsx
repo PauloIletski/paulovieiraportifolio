@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://paulovieira.dev"),
+  metadataBase: new URL("https://paulovieira.site"),
   title: {
     default: "Paulo Vieira | Desenvolvedor Full Stack",
     template: "%s | Paulo Vieira",
