@@ -25,19 +25,19 @@ export const metadata: Metadata = {
   description:
     "Portifolio de Paulo Vieira, desenvolvedor full stack com foco em Next.js, React, Node.js e e-commerce.",
   alternates: {
-    canonical: "/",
+    canonical: "https://paulovieira.site",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/",
+    url: "https://paulovieira.site",
     title: "Paulo Vieira | Desenvolvedor Full Stack",
     description:
       "Projetos, experiencias e habilidades em desenvolvimento full stack com foco em performance e escalabilidade.",
     siteName: "Paulo Vieira Portifolio",
     images: [
       {
-        url: "/vercel",
+        url: "https://paulovieira.site/assets/vercel-icon-light.png",
         width: 1200,
         height: 630,
         alt: "Paulo Vieira - Desenvolvedor Fullstack",
@@ -63,31 +63,70 @@ export const metadata: Metadata = {
   },
 };
 
-const GTM_ID=process.env.NEXT_PUBLIC_GTM_ID
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://paulovieira.site/#person",
+        name: "Paulo Vieira",
+        url: "https://paulovieira.site",
+        jobTitle: "Desenvolvedor Full Stack",
+        description:
+          "Especialista em Next.js, Stripe e arquitetura de e-commerce headless.",
+        sameAs: [
+          "https://github.com/PauloIletski",
+          "https://linkedin.com/in/PauloIletski",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://paulovieira.site/#website",
+        url: "https://paulovieira.site",
+        name: "Paulo Vieira Portfólio",
+        publisher: {
+          "@id": "https://paulovieira.site/#person",
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="pt-BR">
-      <Script
-  id="gtm-base"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
+      <head>
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+      </head>
+    
+      
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+          <Script
+        id="gtm-base"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${GTM_ID}');
     `,
-  }}
-/>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        }}
+      />
         <Analytics />
         <SpeedInsights />
         <Menu />
