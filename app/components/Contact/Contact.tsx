@@ -9,10 +9,18 @@ export function Contact() {
   return (
     <section id="contact" className="w-full bg-gray-100 py-20">
       <div className="max-w-3xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold">Vamos conversar?</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">Entre em contato</h2>
         <p className="mt-4 text-lg text-gray-600">
-          Fique à vontade para entrar em contato para oportunidades, projetos ou
-          parcerias profissionais.
+          Interessado em desenvolver um projeto ou fortalecer sua equipe?
+        </p  >
+        <p className="mt-4 text-lg text-gray-600">Estou disponível para:</p>
+        <p className="mt-4 text-lg text-gray-600">
+          
+          <ul className="tex-start">
+             <li className="text-black hover:text-blue-900"> Projetos freelance</li>
+             <li className="text-black hover:text-blue-900"> Colaboração em times técnicos</li>
+             <li className="text-black hover:text-blue-900"> Oportunidades Full Stack</li>
+          </ul>
         </p>
         <div className="mt-12 rounded-xl bg-white p-6 shadow-sm">
           <form className="space-y-4" onSubmit={handleSubmit}>

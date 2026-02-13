@@ -23,11 +23,10 @@ export function SkillsHero() {
         },
       ],
     },
-
     {
       title: "Back-end",
       description:
-        "Desenvolvimento de APIs e lógica de servidor utilizando tecnologias modernas e práticas de arquitetura escalável.",
+        "Construção de APIs, integrações com serviços externos, controle de autenticação e organização por camadas.",
       stacks: [
         {
           name: "Node.js",
@@ -42,7 +41,7 @@ export function SkillsHero() {
     {
       title: "Banco de Dados",
       description:
-        "Modelagem e gerenciamento de bancos de dados relacionais e não relacionais para garantir a integridade e performance dos dados.",
+        "Modelagem simples e objetiva, priorizando consistência e performance.",
       stacks: [
         {
           name: "MySQL",
@@ -59,8 +58,26 @@ export function SkillsHero() {
       ],
     },
     {
+      title:"DevOps & Infraestrutura",
+      description:"Containerização de aplicações, versionamento estruturado e deploy contínuo.",
+      stacks:[
+        {
+          name:"Docker",
+          icon:"/assets/docker-mark-blue.png"
+        },
+         {
+          name:"Vercel",
+          icon:"/assets/vercel-icon-light.png"
+        },
+         {
+          name:"Git",
+          icon:"/assets/github.png"
+        },
+    ]
+    },
+    {
       title: "E-commerce",
-      description: "Customizações de checkout, loja, catálogo e integrações.",
+      description: "Customizações de checkout, componentes e integrações específicas para ambiente VTEX.",
       stacks: [
         {
           name: "Shopify",
@@ -95,6 +112,13 @@ export function SkillsHero() {
                         height={50}
                       />
                      
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-4 justify-start mb-5">
+                  {skill.stacks.map((stack, stackIndex) => (
+                    <div key={stackIndex} className="flex flex-col items-center text-blue-900 hover:scale-105 ">
+                       {stack.name}
                     </div>
                   ))}
                 </div>

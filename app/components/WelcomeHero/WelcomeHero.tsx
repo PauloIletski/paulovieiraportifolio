@@ -13,9 +13,9 @@ export function WelcomeHero() {
   };
 
   const mockText = {
-    title: "Desenvolvedor Full Stack",
+    title: "Desenvolvedor Full Stack focado em performance, arquitetura escalável e e-commerce",
     description:
-      "Crio interfaces modernas e soluções web escaláveis com foco em performance, usabilidade e resultado de negócio.",
+      "Construo aplicações modernas com Next.js, React e Node.js, integrando pagamentos, CMS, VTEX IO e serviços externos com foco em escalabilidade, SEO e boas práticas de engenharia.",
     linkProjectsText: "Veja meus projetos",
     linkProjectsHref: "#projects",
     linkContatText: "Falar comigo",
@@ -46,7 +46,7 @@ export function WelcomeHero() {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-5 px-4">
-        <h1 className="text-4xl text-white md:text-6xl font-bold mb-4">
+        <h1 className="text-2xl md:text-4xl text-white md:text-6xl font-bold mb-4">
           {mockText.title}
         </h1>
         <p className="text-lg md:text-2xl text-gray-200 mb-8">

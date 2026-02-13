@@ -10,6 +10,11 @@ export function FloatButtons() {
       link: "https://github.com/PauloIletski/",
       icon: "/assets/github.png",
     },
+    {
+      name: "Whatsapp",
+      link: "https://wa.me/5517981048717/?text=Ol%C3%A1+Paulo+sou+[seu+nome]+e+gostaria+de+...",
+      icon: "/assets/whatsapp.png",
+    }
   ];
 
   return (
