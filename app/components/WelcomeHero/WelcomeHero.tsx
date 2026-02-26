@@ -13,9 +13,9 @@ export function WelcomeHero() {
   };
 
   const mockText = {
-    title: "Desenvolvedor Full Stack focado em performance, arquitetura escalável e e-commerce",
+    title: "Desenvolvedor Full Stack",
     description:
-      "Construo aplicações modernas com Next.js, React e Node.js, integrando pagamentos, CMS, VTEX IO e serviços externos com foco em escalabilidade, SEO e boas práticas de engenharia.",
+      "React, Next.js, Node.js, VTEX e tecnologias modernas para criar experiências digitais de alta qualidade.",
     linkProjectsText: "Veja meus projetos",
     linkProjectsHref: "#projects",
     linkContatText: "Falar comigo",
@@ -25,7 +25,7 @@ export function WelcomeHero() {
   return (
 
     <section id="hero" className="flex flex-col md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-center justify-center text-center">
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10 h-full">
         <Image
           src="/assets/background.png"
           alt=""
@@ -35,7 +35,7 @@ export function WelcomeHero() {
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="flex w-48 h-48 overflow-hidden justify-center self-center items-center mt-10 border-4 border-blue-500 rounded-full p-1">
+      <div className="flex w-28 h-28 md:w-48 md:h-48 overflow-hidden justify-center self-center items-center mt-10 border-4 border-blue-500 rounded-full p-1">
         <img
           src={mockImage.src}
           alt={mockImage.alt}
@@ -46,10 +46,10 @@ export function WelcomeHero() {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-5 px-4">
-        <h1 className="text-2xl md:text-4xl text-white md:text-6xl font-bold mb-4">
+        <h1 className="text-2xl  md:text-2xl text-white xl:text-3xl font-bold mb-4">
           {mockText.title}
         </h1>
-        <p className="text-lg md:text-2xl text-gray-200 mb-8">
+        <p className="text-lg text-gray-200 mb-8">
           {mockText.description}
         </p>
         <a
