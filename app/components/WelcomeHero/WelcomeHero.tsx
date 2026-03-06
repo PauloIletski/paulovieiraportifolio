@@ -24,7 +24,7 @@ export function WelcomeHero() {
 
   return (
 
-    <section id="hero" className="flex flex-col md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-center justify-center text-center">
+    <section id="hero" className="flex flex-col min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-center justify-center text-center">
         <div className="absolute inset-0 -z-10 h-full">
         <Image
           src="/assets/background.png"

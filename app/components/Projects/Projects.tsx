@@ -1,6 +1,13 @@
 export function Projects(){
 
     const mockProjects = [
+         {
+            title: "Bruna Stone & Design",
+            description: "Projeto desenvolvido para as campanhas de marketing da Bruna Stone & Design, focado em criar uma landing page para promover os serviços de design de interiores. A página apresenta um layout moderno e visualmente atraente, destacando os projetos anteriores e os diferenciais da empresa. A solução é responsiva, garantindo uma boa experiência em dispositivos móveis e desktop, e foi otimizada para performance e SEO.",
+            image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1772820575/Captura_de_tela_2026-03-06_150738_u0fv5t.png",
+            link: "https://brunastonedesign.com.br/",  
+            stacks: ["ReactJS", "Vite", "Vercel"]
+        },
         {
             title: "Issacar Church - Album",
             description: "O Issacar Imagens foi desenvolvido para resolver a apresentação e a disponibilização organizada dos registros das reuniões da igreja. A plataforma centraliza conteúdos visuais, facilitando o acesso e a consulta pelos membros. A interface responsiva garante boa experiência em dispositivos móveis e desktop. A solução prioriza simplicidade, performance e facilidade de uso para a comunidade.",
@@ -14,13 +21,7 @@ export function Projects(){
             image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770754902/Captura_de_tela_2026-02-10_172108_gnse6a.png",
             link: "https://cross-ambiental-landing.vercel.app/",
             stacks: ["NextJS","Vercel"]},
-        {
-            title: "Network de Posts",
-            description: "O projeto Network de Posts foi criado para demonstrar habilidades full stack na construção de uma aplicação completa. A solução contempla backend, frontend e persistência de dados, simulando um fluxo real de criação e consumo de conteúdo. O projeto evidencia integração entre APIs, regras de negócio e interface do usuário.",
-            image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770755143/Captura_de_tela_2026-02-10_172421_kxiiah.png",
-            link: "https://code-leap-network-beryl.vercel.app/",  
-            stacks: ["NextJS", "NodeJS", "Supabase"]
-        }
+       
     ]
 
     return(
@@ -31,7 +32,10 @@ export function Projects(){
             <div className="flex flex-wrap justify-center gap-8">  
                 {mockProjects.map((project, index) => (
                     <div key={index} className="bg-white rounded-lg p-4 shadow-lg overflow-hidden w-80">
-                        <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md" />
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                             <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md" />
+                        </a>
+                       
                         <div className="p-4">
                             <h3 className="text-xl font-bold text-start mb-2">{project.title}</h3>
                             <div className="flex flex-wrap gap-2 mb-4">

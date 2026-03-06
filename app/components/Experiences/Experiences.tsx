@@ -1,11 +1,25 @@
 export function Experiences(){
     
-    const mockExperiences = [{
+
+    const mockExperiences = [
+        {
+        company: "WPP Commerce",
+        companyLink: "https://wppcommerce.com.br/",
+        companyLogo:"https://d335luupugsy2.cloudfront.net/cms/files/90499/1770222188/$doub3fwxayw",
+        role: "Desenvolvedor Full Stack E-commerce e VTEX ",
+        duration: "Mar 2020 - Atual",
+        whiteLogo:true,
+        points:[
+            "Desenvolvimento de frontends headless para e-commerce utilizando VTEX Fast Store, VTEX IO, React, Next.js e Gatsby, com foco em performance, escalabilidade e SEO.",
+            "Definição e evolução da arquitetura frontend, com criação de componentes reutilizáveis, otimização de Core Web Vitals, redução de bundle e melhoria do tempo de carregamento.",
+            "Colaboração com squads multidisciplinares e atuação em produção, participando de code reviews, decisões arquiteturais, resolução de incidentes críticos e integração com times de produto e marketing."
+        ]
+    },{
         company: "Quality Digital",
         companyLink: "https://qualitydigital.global/",
         companyLogo:"https://qualitydigital.global/wp-content/uploads/2023/04/logo-quality-digital.svg",
         role: "Desenvolvedor Full Stack E-commerce e VTEX ",
-        duration: "Fev 2020 - Dez 2025",
+        duration: "Fev 2026 - Atual",
         points:[
             "Desenvolvimento de frontends headless para e-commerce utilizando VTEX Fast Store, VTEX IO, React, Next.js e Gatsby, com foco em performance, escalabilidade e SEO.",
             "Definição e evolução da arquitetura frontend, com criação de componentes reutilizáveis, otimização de Core Web Vitals, redução de bundle e melhoria do tempo de carregamento.",
@@ -47,7 +61,7 @@ export function Experiences(){
                 
                      <div className="flex flex-col justify-start items-start md:w-100 lg:w-100 mr-4  md:border-r md:border-zinc-200 md:p-4">
                         <a href={experience.companyLink} className="text-blue-500 hover:underline mb-1">
-                            <img src={experience.companyLogo} alt={experience.company} className="w-25 h-16 object-contain mb-2" />
+                            <img src={experience.companyLogo} alt={experience.company} className={`w-25 h-16 object-contain mb-2 p-2 ${experience.whiteLogo ? 'bg-blue-900':'bg-white'}`} />
                         </a>
                         <p className="text-gray-700 text-start mb-4">{experience.role}</p>
                         <p className="text-gray-600 text-start text-sm mb-4">{experience.duration}</p>
