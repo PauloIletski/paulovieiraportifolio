@@ -92,7 +92,7 @@ export function SkillsHero() {
   ];
 
   return (
-    <section id="habilidades" className="flex flex-col min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-start lg:mt-0 justify-start mt-30 text-center">
+    <section id="habilidades" className="flex flex-col min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-start lg:mt-0 justify-start mt-5 text-center">
       <h2 className="text-3xl md:text-5xl font-bold">
         Habilidades
       </h2>
