@@ -1,20 +1,33 @@
-import { useCart } from "../context";
+import type { CartItem } from "@/app/types/cartTypes";
 
-  const handleSendMessage = () => {
- 
-    const whatsappNumber = "5517981048717";
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const {items} = useCart();
- 
-    if (items.length === 0) {
-      alert("Seu carrinho está vazio!");
-      return;
-    }
-    const message = `Olá+!+quero+trocar+uma+ideia+sobre+${items.map(item => item.name).join(",")}`;
+const MOBILE_USER_AGENT_REGEX =
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i;
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+export default function handleSendMessage(items: CartItem[]) {
+  if (items.length === 0) {
+    window.alert("Seu carrinho está vazio!");
+    return;
+  }
 
-    window.open(whatsappUrl, "_blank");
-  };
+  const whatsappNumber = "5517981048717";
+  const message = `Olá! Quero trocar uma ideia sobre ${items
+    .map((item) =>
+      item.quantity > 1 ? `${item.name} (${item.quantity}x)` : item.name
+    )
+    .join(", ")}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+  const isMobileDevice = MOBILE_USER_AGENT_REGEX.test(navigator.userAgent);
 
-export default handleSendMessage;
+  if (isMobileDevice) {
+    window.location.href = whatsappUrl;
+    return;
+  }
+
+  const newWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+  if (!newWindow) {
+    window.location.href = whatsappUrl;
+  }
+}
