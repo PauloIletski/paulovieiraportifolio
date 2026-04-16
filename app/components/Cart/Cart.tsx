@@ -1,23 +1,14 @@
 ﻿"use client";
 
 import { useCart } from "@/app/hooks/useCart";
+import handleSendMessage from "@/app/utils/sendMessage";
 
-const whatsappNumber = "5517981048717";
+
 
 export function Cart() {
   const { items, totalPrice, totalItems, removeItem, updateQuantity, isOpen, closeCart } = useCart();
 
-  const handleSendMessage = () => {
-    if (items.length === 0) {
-      alert("Seu carrinho está vazio!");
-      return;
-    }
-    const message = `Olá+!+quero+trocar+uma+ideia+sobre+${items.map(item => item.name).join(",")}`;
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-    window.open(whatsappUrl, "_blank");
-  };
 
   return (
     <>
