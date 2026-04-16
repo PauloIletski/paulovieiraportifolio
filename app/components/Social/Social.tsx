@@ -18,7 +18,7 @@ export function Social() {
       className="flex flex-col min-h-50 p-5 md:justify-around lg:justify-start lg:mt-0 justify-start text-center"
     >
       <h2 className="text-3xl md:text-5xl font-bold">
-        Ou me encontre nas redes
+        Me encontre nas redes
       </h2>
       <p className="text-lg mb-5 px-4">
         Acesse o linkedin para contato profissional e o github para acompanhar
