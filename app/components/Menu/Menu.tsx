@@ -20,7 +20,7 @@ export function Menu() {
       href: "#projects",
     },
     {
-      name: "HistÃ³rico Profissional",
+      name: "Histórico Profissional",
       href: "#experiences",
     },
     {
