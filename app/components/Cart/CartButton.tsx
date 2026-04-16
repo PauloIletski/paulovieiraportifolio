@@ -159,7 +159,10 @@ export function CartButton() {
                     <span className="text-green-500 font-bold">É gratis (Por enquanto!)</span>
                   )}
                 </div>
-                <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition" onClick={handleSendMessage}>
+                <button
+                  className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+                  onClick={() => handleSendMessage(items)}
+                >
                   Finalizar Compra
                 </button>
               </div>
