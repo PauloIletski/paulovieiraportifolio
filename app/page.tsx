@@ -2,6 +2,7 @@ import { Contact } from "./components/Contact/Contact";
 import { Experiences } from "./components/Experiences/Experiences";
 import { FloatButtons } from "./components/FloatButtons/FloatButtons";
 import { Footer } from "./components/Footer/Footer";
+import { ProductShowcase } from "./components/Services/ProductShowcase";
 import { Projects } from "./components/Projects/Projects";
 import { SkillsHero } from "./components/SkillsHero/SkillsHero";
 import { Social } from "./components/Social/Social";
@@ -24,14 +25,15 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}      
       />
       <main>
         <WelcomeHero />
-        <SkillsHero />
+        {/* <SkillsHero /> */}
+        <ProductShowcase />
         <Projects />
         <Experiences />
-        <Contact />
+        {/* <Contact /> */}
         <Social />
       </main>
       <Footer />

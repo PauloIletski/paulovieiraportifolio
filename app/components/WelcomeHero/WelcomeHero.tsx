@@ -19,7 +19,7 @@ export function WelcomeHero() {
     linkProjectsText: "Veja meus projetos",
     linkProjectsHref: "#projects",
     linkContatText: "Falar comigo",
-    linkContactHref: "#contact",
+    linkContactHref: "#showcase",
   };
 
   return (

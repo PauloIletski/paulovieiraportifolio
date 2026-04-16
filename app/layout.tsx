@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Menu } from "@/app/components/Menu/Menu";
+import { LayoutClient } from "@/app/components/LayoutClient";
+import { CartProvider } from "@/app/context/CartProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -127,8 +128,10 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
-        <Menu />
-        {children}
+        <CartProvider>
+          <LayoutClient />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
