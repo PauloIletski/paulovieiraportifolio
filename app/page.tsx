@@ -1,10 +1,8 @@
-import { Contact } from "./components/Contact/Contact";
 import { Experiences } from "./components/Experiences/Experiences";
 import { FloatButtons } from "./components/FloatButtons/FloatButtons";
 import { Footer } from "./components/Footer/Footer";
 import { ProductShowcase } from "./components/Services/ProductShowcase";
 import { Projects } from "./components/Projects/Projects";
-import { SkillsHero } from "./components/SkillsHero/SkillsHero";
 import { Social } from "./components/Social/Social";
 import { WelcomeHero } from "./components/WelcomeHero/WelcomeHero";
 
@@ -14,7 +12,7 @@ export default function Home() {
     "@type": "Person",
     name: "Paulo Vieira",
     jobTitle: "Desenvolvedor Full Stack",
-    url: "https://paulovieira.dev",
+    url: "https://paulovieira.site",
     sameAs: [
       "https://www.linkedin.com/in/pauloiletski/",
       "https://github.com/PauloIletski/",
@@ -27,13 +25,11 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}      
       />
-      <main>
+      <main className="bg-slate-50 text-zinc-950">
         <WelcomeHero />
-        {/* <SkillsHero /> */}
         <ProductShowcase />
         <Projects />
         <Experiences />
-        {/* <Contact /> */}
         <Social />
       </main>
       <Footer />

@@ -1,56 +1,110 @@
-export function Projects(){
+export function Projects() {
+  const projects = [
+    {
+      title: "Bruna Stone & Design",
+      description:
+        "Landing page responsiva para campanhas de marketing, com foco em apresentação visual, performance e SEO.",
+      image:
+        "https://res.cloudinary.com/dfddi3cl7/image/upload/v1772820575/Captura_de_tela_2026-03-06_150738_u0fv5t.png",
+      link: "https://brunastonedesign.com.br/",
+      stacks: ["ReactJS", "Vite", "Vercel"],
+      badge: "Landing page",
+    },
+    {
+      title: "Issacar Church - Album",
+      description:
+        "Galeria para organizar registros visuais da comunidade, com experiência simples para consulta em mobile e desktop.",
+      image:
+        "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770754208/Captura_de_tela_2026-02-10_170220_cibrkx.png",
+      link: "https://github.com/PauloIletski/image-gallery-next-ph",
+      stacks: ["NextJS", "Cloudinary API", "Google API", "Vercel"],
+      badge: "Aplicação web",
+    },
+    {
+      title: "Cross Ambiental - Novo Site",
+      description:
+        "Site institucional modernizado para comunicar soluções com clareza, identidade visual consistente e boa navegação.",
+      image:
+        "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770754902/Captura_de_tela_2026-02-10_172108_gnse6a.png",
+      link: "https://cross-ambiental-landing.vercel.app/",
+      stacks: ["NextJS", "Vercel"],
+      badge: "Institucional",
+    },
+  ];
 
-    const mockProjects = [
-         {
-            title: "Bruna Stone & Design",
-            description: "Projeto desenvolvido para as campanhas de marketing da Bruna Stone & Design, focado em criar uma landing page para promover os serviços de design de interiores. A página apresenta um layout moderno e visualmente atraente, destacando os projetos anteriores e os diferenciais da empresa. A solução é responsiva, garantindo uma boa experiência em dispositivos móveis e desktop, e foi otimizada para performance e SEO.",
-            image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1772820575/Captura_de_tela_2026-03-06_150738_u0fv5t.png",
-            link: "https://brunastonedesign.com.br/",  
-            stacks: ["ReactJS", "Vite", "Vercel"]
-        },
-        {
-            title: "Issacar Church - Album",
-            description: "O Issacar Imagens foi desenvolvido para resolver a apresentação e a disponibilização organizada dos registros das reuniões da igreja. A plataforma centraliza conteúdos visuais, facilitando o acesso e a consulta pelos membros. A interface responsiva garante boa experiência em dispositivos móveis e desktop. A solução prioriza simplicidade, performance e facilidade de uso para a comunidade.",
-            image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770754208/Captura_de_tela_2026-02-10_170220_cibrkx.png",
-            link: "https://github.com/PauloIletski/image-gallery-next-ph",
-            stacks: ["NextJS", "CloudinaryAPI", "Google API","Vercel"]
-        },
-        {
-            title: "Cross Ambiental - Novo Site",
-            description: "O projeto Cross Ambiental teve como objetivo modernizar o layout do site institucional, tornando a comunicação mais clara e atual. A nova interface foi pensada para melhorar a apresentação dos serviços e fortalecer a identidade visual da empresa. O design responsivo garante uma experiência consistente em diferentes dispositivos. A solução entrega um site mais moderno, acessível e alinhado às expectativas do público institucional.",
-            image: "https://res.cloudinary.com/dfddi3cl7/image/upload/v1770754902/Captura_de_tela_2026-02-10_172108_gnse6a.png",
-            link: "https://cross-ambiental-landing.vercel.app/",
-            stacks: ["NextJS","Vercel"]},
-       
-    ]
+  return (
+    <section id="projects" className="bg-slate-50 px-4 py-14 md:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-blue-600">
+              Projetos do currículo
+            </p>
+            <h2 className="mt-2 text-3xl font-black text-zinc-950 md:text-5xl">
+              Cases que demonstram experiência prática
+            </h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-zinc-600">
+              Uma seleção de entregas que evidenciam atuação em presença
+              digital, performance, conteúdo e integração.
+            </p>
+          </div>
+          <a
+            href="#showcase"
+            className="inline-flex w-fit items-center justify-center rounded border border-zinc-300 bg-white px-5 py-3 text-sm font-black text-zinc-900 transition hover:border-blue-500 hover:text-blue-700"
+          >
+            Ver competências técnicas
+          </a>
+        </div>
 
-    return(
-        <section id="projects" className="flex flex-col py-4 bg-gray-100 min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-start lg:justify-start lg:mt-0 justify-start mt-10 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mt-10 mb-5">Projetos em Destaque</h2>
-            <p className="text-lg mb-10">Alguns dos projetos que desenvolvi mostrando minhas habilidades e experiências</p>
+        <div className="grid gap-5 md:grid-cols-3">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-56 w-full object-cover"
+                />
+              </a>
 
-            <div className="flex flex-wrap justify-center gap-8">  
-                {mockProjects.map((project, index) => (
-                    <div key={index} className="bg-white rounded-lg p-4 shadow-lg overflow-hidden w-80">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                             <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md" />
-                        </a>
-                       
-                        <div className="p-4">
-                            <h3 className="text-xl font-bold text-start mb-2">{project.title}</h3>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {project.stacks.map((stack, i) => (
-                                    <span key={i} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{stack}</span>
-                                ))}
-                            </div>
-                            <p className="text-gray-700 text-center mb-4">{project.description}</p>
-                            
-                            <a href={project.link} className="text-blue-500 hover:bg-blue-600 p-2 bg-blue-500 text-white rounded">Ver detalhes</a>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+              <div className="p-5">
+                <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">
+                  {project.badge}
+                </span>
+                <h3 className="mt-4 text-xl font-black text-zinc-950">
+                  {project.title}
+                </h3>
+                <p className="mt-3 min-h-24 text-sm leading-6 text-zinc-600">
+                  {project.description}
+                </p>
 
-    )
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stacks.map((stack) => (
+                    <span
+                      key={stack}
+                      className="rounded bg-zinc-100 px-2 py-1 text-xs font-bold text-zinc-700"
+                    >
+                      {stack}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded bg-zinc-950 px-4 py-3 text-sm font-black text-white transition hover:bg-blue-700"
+                >
+                  Ver detalhes
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

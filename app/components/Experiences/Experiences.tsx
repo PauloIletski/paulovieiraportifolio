@@ -1,80 +1,104 @@
-export function Experiences(){
-    
-
-    const mockExperiences = [
-        {
-        company: "WPP Commerce",
-        companyLink: "https://wppcommerce.com.br/",
-        companyLogo:"https://d335luupugsy2.cloudfront.net/cms/files/90499/1770222188/$doub3fwxayw",
-        role: "Desenvolvedor Full Stack E-commerce e VTEX ",
-        duration: "Mar 2020 - Atual",
-        whiteLogo:true,
-        points:[
-            "Desenvolvimento de frontends headless para e-commerce utilizando VTEX Fast Store, VTEX IO, React, Next.js e Gatsby, com foco em performance, escalabilidade e SEO.",
-            "Definição e evolução da arquitetura frontend, com criação de componentes reutilizáveis, otimização de Core Web Vitals, redução de bundle e melhoria do tempo de carregamento.",
-            "Colaboração com squads multidisciplinares e atuação em produção, participando de code reviews, decisões arquiteturais, resolução de incidentes críticos e integração com times de produto e marketing."
-        ]
-    },{
-        company: "Quality Digital",
-        companyLink: "https://qualitydigital.global/",
-        companyLogo:"https://qualitydigital.global/wp-content/uploads/2023/04/logo-quality-digital.svg",
-        role: "Desenvolvedor Full Stack E-commerce e VTEX ",
-        duration: "Fev 2026 - Atual",
-        points:[
-            "Desenvolvimento de frontends headless para e-commerce utilizando VTEX Fast Store, VTEX IO, React, Next.js e Gatsby, com foco em performance, escalabilidade e SEO.",
-            "Definição e evolução da arquitetura frontend, com criação de componentes reutilizáveis, otimização de Core Web Vitals, redução de bundle e melhoria do tempo de carregamento.",
-            "Colaboração com squads multidisciplinares e atuação em produção, participando de code reviews, decisões arquiteturais, resolução de incidentes críticos e integração com times de produto e marketing."
-        ]
+export function Experiences() {
+  const experiences = [
+    {
+      company: "WPP Commerce",
+      companyLink: "https://wppcommerce.com.br/",
+      companyLogo:
+        "https://d335luupugsy2.cloudfront.net/cms/files/90499/1770222188/$doub3fwxayw",
+      role: "Desenvolvedor Full Stack E-commerce e VTEX",
+      duration: "Mar 2020 - Atual",
+      whiteLogo: true,
+      points: [
+        "Frontends headless para e-commerce com VTEX Fast Store, VTEX IO, React, Next.js e Gatsby.",
+        "Arquitetura frontend, componentes reutilizáveis e otimização de Core Web Vitals.",
+        "Atuação em produção, code reviews, decisões técnicas e integração com squads multidisciplinares.",
+      ],
     },
-{
-        company: "Minerva Foods",   
-        companyLink: "https://minervafoods.com/",
-        companyLogo: "https://minervafoods.com/wp-content/uploads/2024/08/logo.webp",
-        role: "Service Desk Assistant | Sistemas Internos",
-        duration: "jul de 2019 - jan de 2020",
-        points:[
-            "Suporte e resolução de incidentes em sistemas internos, atuando na análise, correção funcional e garantia da continuidade das operações.",
-            "Manutenção e ajustes em bancos de dados e aplicações, realizando consultas e correções em SQL Server e MySQL, além de ajustes pontuais em sistemas Delphi, PHP e JavaScript.",
-            "Gestão de chamados e comunicação com usuários, registrando e priorizando demandas via JIRA, alinhando soluções com áreas internas dentro dos SLAs estabelecidos."
-        ]
-},
-{
-    company: "Unither Pharmaceuticals",
-    companyLogo: "https://www.unither-pharma.com/wp-content/uploads/2026/01/logo-unither-pharmaceuticals-site-internet.png",
-    companyLink: "https://www.unither-pharma.com/pt-br/",
-    role: "Estagiário de Desenvolvimento",
-    duration: "jun de 2017 -  jul de 2019",
-    points:[
-        "Suporte e gestão de sistemas corporativos em ambiente regulado, atuando na organização de demandas de TI, acompanhamento de sistemas de terceiros e interface com áreas internas para garantir estabilidade e aderência a processos.",
-        "Desenvolvimento e automação de soluções internas, criando aplicações em JavaScript na plataforma Fluig (TOTVS) para apoiar rotinas corporativas e otimizar processos.",
-        "Atendimento técnico e suporte a usuários, com atuação em manutenção de hardware e software, organização de ativos de TI e comunicação direta com usuários para resolução de demandas operacionais."
-    ]
-}]
-    
-    return(
-        <section id="experiences" className="flex flex-col bg-white min-h-screen md:min-h-screen lg:min-h-screen lg:h-full md:justify-around lg:justify-center lg:mt-0 justify-start mt-10 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mt-10 mb-5">Experiências Profissionais</h2>
-            <p className="text-lg mb-5 px-4">Minhas experiências e responsabilidades em empresas anteriores</p>
-            <div className="flex flex-wrap p-4 justify-center gap-8">
-                {mockExperiences.map((experience, index) => (
-                    <div key={index} className="rounded-xl  flex flex-col w-full md:flex-row lg:flex-row md:w-1/2 lg:w-1/2 bg-white p-6 shadow-sm hover:shadow-xl ">
-                
-                     <div className="flex flex-col justify-start items-start md:w-100 lg:w-100 mr-4  md:border-r md:border-zinc-200 md:p-4">
-                        <a href={experience.companyLink} className="text-blue-500 hover:underline mb-1">
-                            <img src={experience.companyLogo} alt={experience.company} className={`w-25 h-16 object-contain mb-2 p-2 ${experience.whiteLogo ? 'bg-blue-900':'bg-white'}`} />
-                        </a>
-                        <p className="text-gray-700 text-start mb-4">{experience.role}</p>
-                        <p className="text-gray-600 text-start text-sm mb-4">{experience.duration}</p>
-                     </div>
-                       
-                        <ul className="list-disc list-inside text-left">
-                            {experience.points.map((point, i) => (
-                                <li key={i} className="mb-2">{point}</li>
-                            ))}
-                        </ul>
-                    </div>
+    {
+      company: "Quality Digital",
+      companyLink: "https://qualitydigital.global/",
+      companyLogo:
+        "https://qualitydigital.global/wp-content/uploads/2023/04/logo-quality-digital.svg",
+      role: "Desenvolvedor Full Stack E-commerce e VTEX",
+      duration: "Fev 2026 - Atual",
+      points: [
+        "Desenvolvimento de interfaces e integrações para operação digital em escala.",
+        "Evolução de componentes, performance e manutenção de jornadas críticas.",
+        "Colaboração com times de produto, marketing, QA e operação.",
+      ],
+    },
+    {
+      company: "Minerva Foods",
+      companyLink: "https://minervafoods.com/",
+      companyLogo: "https://minervafoods.com/wp-content/uploads/2024/08/logo.webp",
+      role: "Service Desk Assistant | Sistemas Internos",
+      duration: "Jul 2019 - Jan 2020",
+      points: [
+        "Suporte e resolução de incidentes em sistemas internos.",
+        "Consultas e correções em SQL Server e MySQL.",
+        "Gestão de chamados e comunicação com usuários dentro dos SLAs.",
+      ],
+    },
+  ];
+
+  return (
+    <section id="experiences" className="bg-white px-4 py-14 md:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-8 text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-blue-600">
+            Histórico profissional
+          </p>
+          <h2 className="mt-2 text-3xl font-black text-zinc-950 md:text-5xl">
+            Experiência em operações reais
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-zinc-600">
+            A navegação é objetiva, mas o conteúdo reflete atuação prática em
+            e-commerce, sistemas internos, sustentação e times multidisciplinares.
+          </p>
+        </div>
+
+        <div className="grid gap-5 lg:grid-cols-3">
+          {experiences.map((experience) => (
+            <article
+              key={experience.company}
+              className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm"
+            >
+              <a
+                href={experience.companyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-20 items-center"
+              >
+                <img
+                  src={experience.companyLogo}
+                  alt={experience.company}
+                  className={`max-h-16 max-w-44 object-contain p-2 ${
+                    experience.whiteLogo ? "bg-blue-950" : "bg-white"
+                  }`}
+                />
+              </a>
+              <h3 className="mt-4 text-lg font-black text-zinc-950">
+                {experience.company}
+              </h3>
+              <p className="mt-1 text-sm font-semibold text-blue-700">
+                {experience.role}
+              </p>
+              <p className="mt-1 text-sm text-zinc-500">
+                {experience.duration}
+              </p>
+
+              <ul className="mt-5 space-y-3">
+                {experience.points.map((point) => (
+                  <li key={point} className="flex gap-3 text-sm leading-6 text-zinc-600">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-green-500" />
+                    <span>{point}</span>
+                  </li>
                 ))}
-            </div>
-        </section>
-    )
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

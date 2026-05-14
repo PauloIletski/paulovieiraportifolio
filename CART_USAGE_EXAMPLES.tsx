@@ -156,8 +156,6 @@ Exemplo de dados armazenados:
 // =============================================
 
 export function FullProductExample() {
-  const { addItem } = useCart();
-
   const products = [
     {
       id: "1",

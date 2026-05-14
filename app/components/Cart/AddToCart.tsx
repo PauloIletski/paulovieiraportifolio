@@ -74,7 +74,7 @@ export function AddToCart({ item, showLabel = true, variant = "button" }: AddToC
               : "bg-blue-600 text-white hover:bg-blue-700"
           }`}
         >
-          {isAdded ? "✓ Adicionado!" : "Adicionar ao Carrinho"}
+          {isAdded ? "✓ Selecionado!" : "Selecionar competência"}
         </button>
       </div>
     );
@@ -113,7 +113,7 @@ export function AddToCart({ item, showLabel = true, variant = "button" }: AddToC
             : "bg-blue-600 text-white hover:bg-blue-700"
         }`}
       >
-        {isAdded ? "✓" : showLabel ? "Adicionar" : "🛒"}
+        {isAdded ? "✓" : showLabel ? "Selecionar" : "✓"}
       </button>
     </div>
   );

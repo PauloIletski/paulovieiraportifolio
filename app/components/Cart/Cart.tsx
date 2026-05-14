@@ -14,15 +14,15 @@ export function Cart() {
     <>
       <section
         id="cart"
-        className={`hidden md:flex fixed right-0 z-40 flex-col bg-white w-100 shadow-xl max-w-sm h-[calc(100vh-3rem)] overflow-y-auto p-6 transition-all duration-300 ${
+        className={`fixed inset-y-0 right-0 z-[60] hidden w-full max-w-sm flex-col overflow-hidden bg-white shadow-2xl transition-all duration-300 md:flex ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold">Carrinho</h2>
+        <div className="flex items-center justify-between border-b border-zinc-200 p-6">
+          <h2 className="text-2xl font-bold">Seleção</h2>
           <button
             onClick={closeCart}
-            aria-label="Fechar carrinho"
+            aria-label="Fechar seleção"
             className="inline-flex h-8 w-8 items-center justify-center text-zinc-500 transition hover:bg-zinc-100 rounded"
           >
             <svg
@@ -42,10 +42,10 @@ export function Cart() {
         </div>
 
         {items.length === 0 ? (
-          <p className="text-base text-zinc-600">Seu carrinho está vazio</p>
+          <p className="p-6 text-base text-zinc-600">Nenhuma competência selecionada</p>
         ) : (
-          <div className="flex flex-col gap-4 flex-1">
-            <div className="flex-1 space-y-3 overflow-y-auto">
+          <div className="flex min-h-0 flex-1 flex-col">
+            <div className="flex-1 space-y-3 overflow-y-auto p-6">
               {items.map((item) => (
                 <div
                   key={item.id}
@@ -64,7 +64,9 @@ export function Cart() {
                       <p className="text-xs text-zinc-600 mb-2">
                         R$ {item.price.toFixed(2)}
                       </p>
-                    ) : null}
+                    ) : (
+                      <p className="text-xs text-zinc-600 mb-2">Em currículo</p>
+                    )}
 
                     <div className="flex items-center gap-2">
                       <button
@@ -112,26 +114,26 @@ export function Cart() {
               ))}
             </div>
 
-            <div className="border-t border-zinc-200 pt-4 space-y-2">
+            <div className="shrink-0 space-y-3 border-t border-zinc-200 bg-white p-6 shadow-[0_-10px_30px_rgba(15,23,42,0.08)]">
               <div className="flex justify-between text-sm">
-                <span className="text-zinc-600">Itens:</span>
+                <span className="text-zinc-600">Tópicos:</span>
                 <span className="font-semibold">{totalItems}</span>
               </div>
               <div className="flex justify-between text-lg">
-                <span className="font-semibold">Total:</span>
+                <span className="font-semibold">Contexto:</span>
                 {totalPrice > 0 ? (
                   <span className="font-bold text-blue-600">
                     R$ {totalPrice.toFixed(2)}
                   </span>
                 ) : (
-                  <span className="text-green-500 font-bold">É gratis (Por enquanto!)</span>
+                  <span className="text-green-600 font-bold">Pauta profissional</span>
                 )}
               </div>
               <button
-                className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition mt-2"
+                className="w-full rounded-lg bg-blue-600 py-3 font-bold text-white transition hover:bg-blue-700"
                 onClick={() => handleSendMessage(items)}
               >
-                Finalizar Compra
+                Enviar contato
               </button>
             </div>
           </div>

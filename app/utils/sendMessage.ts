@@ -5,16 +5,16 @@ const MOBILE_USER_AGENT_REGEX =
 
 export default function handleSendMessage(items: CartItem[]) {
   if (items.length === 0) {
-    window.alert("Seu carrinho está vazio!");
+    window.alert("Nenhuma competência foi selecionada.");
     return;
   }
 
   const whatsappNumber = "5517981048717";
-  const message = `Olá! Quero trocar uma ideia sobre ${items
+  const message = `Olá, Paulo! Vi seu portfólio e gostaria de conversar sobre sua experiência em ${items
     .map((item) =>
       item.quantity > 1 ? `${item.name} (${item.quantity}x)` : item.name
     )
-    .join(", ")}`;
+    .join(", ")}.`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     message
   )}`;
